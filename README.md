@@ -1,2 +1,2 @@
 # fmzbl.github.io
-(fmzbl.com)[]
+(fmzbl.com)[fmzbl.com]
