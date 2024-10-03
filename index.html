@@ -11,10 +11,18 @@
   </head>
   <body>
     <p>hi, this is fmzbl's website, formally known as Facundo Mendizábal, aka facu.</p>
-    <p>20 yo. sometimes i program computers.</p>
+    <p><span id="age"></span> yo. sometimes i program computers.</p>
     <p>i like computers.</p>
     <p><a href="mailto:facu@fmzbl.com">facu@fmzbl.com</a></p>
     <p><a href="https://www.github.com/fmzbl" target="_blank">github.com/fmzbl</a></p>
     <p><a href="https://www.x.com/fmzbl" target="_blank">x.com/fmzbl</a></p>
+
+    <script>
+      function calculateAge(birthday) {
+        const diff = new Date(Date.now() - new Date(birthday).getTime());
+        return Math.abs(diff.getUTCFullYear() - 1970);
+      }
+      document.getElementById('age').textContent = calculateAge('2004-08-28');
+    </script>
   </body>
 </html>
