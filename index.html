@@ -1,29 +1,39 @@
 <html>
-  <head>
-    <style>
-      body {
-        font-family: monospace;
-        max-width: 50em;
-        margin: 2em auto;
-      }
-    </style>
-    <title>fmzbl</title>
-  </head>
-  <body>
-    <p>hi, this is fmzbl's website, formally known as Facundo Mendizábal, aka facu.</p>
-    <p><span id="age"></span> yo. sometimes i program computers.</p>
-    <p>i like computers.</p>
-    <p>[~]</p>
-    <p><a href="mailto:facu@fmzbl.com">facu@fmzbl.com</a></p>
-    <p><a href="https://www.github.com/fmzbl" target="_blank">github.com/fmzbl</a></p>
-    <p><a href="https://www.x.com/fmzbl" target="_blank">x.com/fmzbl</a></p>
-
-    <script>
-      function calculateAge(birthday) {
-        const diff = new Date(Date.now() - new Date(birthday).getTime());
-        return Math.abs(diff.getUTCFullYear() - 1970);
-      }
-      document.getElementById('age').textContent = calculateAge('2004-08-28');
-    </script>
-  </body>
+   <head>
+      <style>
+         body {
+         font-family: monospace;
+         max-width: 50em;
+         margin: 2em auto;
+         white-space: pre-wrap;
+         }
+         a {
+         color: blue;
+         text-decoration: none;
+         }
+      </style>
+      <title>fmzbl</title>
+   </head>
+   <body>
+      <pre><code>[hi, this is fmzbl's website, formally known as Facundo Mendizábal, aka facu.
+  [<span id="age">20</span> yo. sometimes i program computers.]
+  [i like computers.]
+  [~]
+  [<a href="mailto:facu@fmzbl.com">facu@fmzbl.com</a>]
+  [<a href="https://www.github.com/fmzbl" target="_blank">github.com/fmzbl</a>]
+  [<a href="https://www.x.com/fmzbl" target="_blank">x.com/fmzbl</a>]
+  [recursive
+    [chaos
+      [folded
+        [folder
+          [folding
+            [~]]]]]]]</code></pre>
+      <script>
+         function calculateAge(birthday) {
+           const diff = new Date(Date.now() - new Date(birthday).getTime());
+           return Math.abs(diff.getUTCFullYear() - 1970);
+         }
+         document.getElementById('age').textContent = calculateAge('2004-08-28');
+      </script>
+   </body>
 </html>
