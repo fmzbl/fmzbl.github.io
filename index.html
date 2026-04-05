@@ -4,6 +4,14 @@
         font-family: monospace;
         max-width: 50em;
         margin: 2em auto;
+        position: relative;
+      }
+      .bg-symbol {
+        position: fixed;
+        width: 100px;
+        opacity: 0.25;
+        z-index: -1;
+        pointer-events: none;
       }
       a {
          color: blue;
@@ -74,4 +82,24 @@ during and post psychosis pieces (newest to old)
 <img src="/assets/pieces/2.jpeg" alt="2">
 <img src="/assets/pieces/1.jpeg" alt="1">
 
+<script>
+(function() {
+  var cols = Math.ceil(window.innerWidth / 180);
+  var rows = Math.ceil(window.innerHeight / 180);
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < cols; c++) {
+      var img = document.createElement('img');
+      img.src = '/assets/o-[]-o.png';
+      img.className = 'bg-symbol';
+      var x = c * 180 + Math.random() * 40 - 20;
+      var y = r * 180 + Math.random() * 40 - 20;
+      var angle = Math.floor(Math.random() * 360);
+      img.style.left = x + 'px';
+      img.style.top = y + 'px';
+      img.style.transform = 'rotate(' + angle + 'deg)';
+      document.body.appendChild(img);
+    }
+  }
+})();
+</script>
 </body></html>
